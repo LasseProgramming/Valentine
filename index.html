@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Valentine</title>
+    <link rel="icon" href="images/hero-icon.png" type="image/icon type">
+</head>
+<body>
+    
+    <div class="container">
+            <div id="letter" class="letter" onclick="clickLetter()">
+                <div id="letter-cover" class="letter-cover">
+                    <div class="letter-cover-front">
+                        <img id="heart-image" src="images/heart.png" alt="">
+                    </div>
+                    <div class="letter-cover-back"> 
+                        <img id="heart-image" src="images/moon2.png" alt="">
+                    </div>
+                </div>
+                <div id="letter-content" class="letter-content">
+                    <div>I made a small quiz about our time together. If you answer anything wrong, you have to start over.</div>
+                    <button id="ready-button" class="answer-button" onclick="startQuiz()">ready?</button>
+                </div>
+            </div>
+
+        <div id="quiz-container" class="quiz-container hidden">
+            <div id="quiz-image" class="quiz-image">
+                <div class="iframe-cover"></div>
+                <iframe id="gifs" src="" frameBorder="0"></iframe>
+            </div>
+            <div id="counter"></div>
+            <div id="quiz-question" class="quiz-question"></div>
+            <div class="quiz-answers">
+                <div class="quiz-answers-sub">
+                    <button class="answer-button" onclick="checkAnswer(event)" id="answer-1">To the moon</button>
+                    <button class="answer-button" onclick="checkAnswer(event)" id="answer-2">Hellow world</button>
+                </div>
+                <div class="quiz-answers-sub">
+                    <button class="answer-button" onclick="checkAnswer(event)" id="answer-3">Banana</button>
+                    <button class="answer-button" onclick="checkAnswer(event)" id="answer-4">Pie</button>
+                </div>
+            </div>
+        </div>
+        <div id="incorrect-container" class="incorrect-container hidden">
+            
+            <div id="incorrect-image" class="incorrect-image">
+                <div class="iframe-cover"></div>
+                <iframe class="incorrect-gif" src="https://giphy.com/embed/HSvpy6Jk396SI" frameBorder="0"></iframe>
+            </div>
+            <div class="incorrect-content">
+                <h1>Oh no!</h1>
+                <p>The was not correct. You will have to start over</p>
+                <button class="retry-button" onclick="handleIncorrect()">Retry</button>
+            </div>
+
+        </div>
+        <div id="final-container" class="final-container hidden">
+            
+            <div id="final-image" class="final-image">
+                <div class="iframe-cover"></div>
+                <iframe class="final-gif" src="https://giphy.com/embed/l2Jhok92mZ2PZHjDG" frameBorder="0"></iframe>
+            </div>
+            <div class="final-content">
+                <h1>YOU DID IT!</h1>
+                <p>You may now open your gift</p>
+            </div>
+
+        </div>
+    </div>
+    <script src="questions.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
